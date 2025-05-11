@@ -1,0 +1,153 @@
+.calendar-container {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    min-height: 500px;
+    /* 新增最小高度 */
+}
+
+.calendar-box {
+    position: relative;
+    min-height: 400px;
+    padding-bottom: 60px;
+    /* 新增底部留白 */
+}
+
+/* 日期选择器 */
+.calendar-header {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.date-picker {
+    max-height: 150px;
+    transition: all 0.3s;
+    width: 250px;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    background: white;
+}
+
+.date-picker option {
+    padding: 8px 12px;
+    animation-fill-mode: forwards;
+}
+
+/* 日历容器 */
+#calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(40px, 1fr));
+    /* 最小40px最大等分 */
+    gap: 5px;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: #f8f9fa;
+    max-width: 100%;
+    overflow-x: auto;
+    /* 添加水平滚动 */
+}
+
+/* 响应式调整 */
+@media (min-width: 1200px) {
+    #calendar-grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .calendar-day {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    #calendar-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .calendar-day {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    #calendar-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .calendar-day {
+        padding: 6px;
+        font-size: 0.8em;
+    }
+}
+
+/* 日期方框 */
+.calendar-day {
+    aspect-ratio: 1;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    /* 禁止缩小 */
+}
+
+/* 悬停效果 */
+.calendar-day:hover {
+    background: #e9ecef;
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 日期数字 */
+.day-number {
+    font-size: 1.2em;
+    color: #495057;
+    cursor: pointer;
+}
+
+.date-detail {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    max-width: 80%;
+    /* 新增最大宽度限制 */
+    white-space: nowrap;
+    /* 新增不换行 */
+}

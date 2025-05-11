@@ -1,0 +1,41 @@
+<!-- data.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>数据展示 - 题库系统</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dataVisual.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">🏠 首页</a></li>
+            <li><a href="question.html">📚 题目展示</a></li>
+            <li><a href="dataVisual.html">📊 数据展示</a></li>
+            <li><a href="user.html">👥 人员管理</a></li>
+            <li><a href="question_setting.html">⚙️ 题目设置</a></li>
+            <li><a href="login.html">🔑 登录</a></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard">
+        <!-- 左侧小图 -->
+        <div class="chart-box side-chart" id="left1"></div>
+        <div class="chart-box side-chart" id="left2"></div>
+
+        <!-- 中间主图 -->
+        <div class="chart-box main-chart" id="main"></div>
+
+        <!-- 右侧小图 -->
+        <div class="chart-box side-chart" id="right1"></div>
+        <div class="chart-box side-chart" id="right2"></div>
+    </div>
+
+    <script src="js/dataVisual.js"></script>
+</body>
+
+</html>

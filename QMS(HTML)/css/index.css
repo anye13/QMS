@@ -1,0 +1,20 @@
+/* 内容区域 */
+.content {
+    margin-left: 200px;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* 首页特有样式 */
+.profile-box {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.profile-box:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}

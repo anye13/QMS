@@ -1,0 +1,47 @@
+<!-- question.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>题目展示 - 题库系统</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/question.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">🏠 首页</a></li>
+            <li><a href="question.html">📚 题目展示</a></li>
+            <li><a href="dataVisual.html">📊 数据展示</a></li>
+            <li><a href="user.html">👥 人员管理</a></li>
+            <li><a href="question_setting.html">⚙️ 题目设置</a></li>
+            <li><a href="login.html">🔑 登录</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="question-container">
+            <div id="question-area" class="question-box">
+                <!-- 题目内容 -->
+            </div>
+
+            <div class="question-box">
+                <h2>🔍 答案与解析
+                    <button id="toggle-explanation" style="font-size:14px; padding:4px 8px;">展开</button>
+                </h2>
+                <div id="explanation-content" class="explanation-collapsed">
+                    <!-- 解析内容 -->
+                </div>
+            </div>
+        </div>
+
+        <div class="answer-card" id="answer-card">
+            <!-- 答题卡状态 -->
+        </div>
+    </main>
+    <script src="js/question.js"></script>
+</body>
+
+</html>

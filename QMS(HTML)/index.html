@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页 - 题库系统</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/calendar.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">🏠 首页</a></li>
+            <li><a href="question.html">📚 题目展示</a></li>
+            <li><a href="dataVisual.html">📊 数据展示</a></li>
+            <li><a href="user.html">👥 人员管理</a></li>
+            <li><a href="question_setting.html">⚙️ 题目设置</a></li>
+            <li><a href="login.html">🔑 登录</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="profile-box">
+            <h2>👤 个人简介</h2>
+            <p style="margin-top: 15px; line-height: 1.6;">
+                欢迎使用智能题库系统！<br>
+                当前用户：教师管理员<br>
+                账号状态：已认证 ✔️<br>
+                最后登录：2023-10-20
+            </p>
+        </div>
+
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <select id="yearSelect" class="date-picker"></select>
+                <select id="monthSelect" class="date-picker"></select>
+            </div>
+            <div class="calendar-box">
+                <div id="calendar-grid"></div>
+            </div>
+        </div>
+    </main>
+    <script src="js/time-and-calendar.js"></script>
+</body>
+
+</html>
